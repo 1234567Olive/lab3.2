@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="26sp"
+            android:text="新增地址"
+            />
+
+        <View style="style/horizontal_layout"
+            android:id="@+id/titleLine"
+            android:layout_below="@+id/title"
+            android:layout_width="match_parent"
+            />
+
+
+        <TextView
+            android:id="@+id/contentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/titleLine"
+            android:textSize="20sp"
+            android:text="当前位置"
+            />
+        <LinearLayout
+            android:id="@+id/contentShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/contentTitle"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+
+            >
+            <TextView
+                android:id="@+id/altitued"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="经度:"
+
+                />
+
+            <TextView
+                android:id="@+id/altituedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="NULL"
+                />
+
+            <TextView
+                android:id="@+id/longtitued"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:textSize="20sp"
+                android:text="纬度:"
+                />
+
+            <TextView
+                android:id="@+id/longtituedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="NULL"
+                />
+        </LinearLayout>
+
+
+        <View style="style/horizontal_layout"
+            android:id="@+id/contentLine"
+            android:layout_below="@+id/contentShow"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/addressEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contentLine"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/addressName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"
+                android:text="地点名称:"
+                />
+
+
+            <EditText
+                android:id="@+id/addressNameText"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
